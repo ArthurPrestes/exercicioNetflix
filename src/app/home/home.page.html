@@ -1,0 +1,83 @@
+<ion-content>
+  <div class="header">
+    <ion-grid>
+      <ion-row class="ion-text-left ion-align-items-center">
+        <ion-col size="2">
+          <img src="assets/img/logo.png">
+        </ion-col>
+
+        <ion-col size="10">
+          <ion-row>
+            <ion-col size="4"><span>Séries</span></ion-col>
+
+            <ion-col size="4">Filmes</ion-col>
+
+            <ion-col size="4">Minha lista</ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="main-poster">
+    <div class="gradient top"></div>
+
+    <div class="gradient bottom">
+      <div class="title">
+        <img src="/assets/img/title.webp">
+      </div>
+    </div>
+  </div>
+
+  <ion-grid class="actions">
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="dark" expand="block" fill="clear">
+          <div>
+            <ion-icon name="add-outline"></ion-icon>
+            <ion-label>Minha lista</ion-label>
+          </div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-button expand="block" color="dark">
+          <ion-icon slot="start" name="play"></ion-icon>
+          Assitir
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-button color="dark" expand="block" fill="clear">
+          <div>
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <ion-label>Saíba mais</ion-label>
+          </div>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="content ion-padding">
+    <div class="title">
+      <span>Prévias</span>
+    </div>
+
+    <ion-slides class="stories" [options]="slidesOptions">
+    <ion-slide *ngfor="let story of stories">
+      <ion-img [src]="story.Poster"></ion-img>
+    </ion-slide>
+    </ion-slides>
+
+    <div class="title">
+      <span>Minha lista</span>
+    </div>
+
+    <div class="title">
+      <span>Continuar assistindo</span>
+    </div>
+  </div>
+
+</ion-content>
