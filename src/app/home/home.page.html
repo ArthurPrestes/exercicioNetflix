@@ -61,22 +61,35 @@
   </ion-grid>
 
   <div class="content ion-padding">
-    <div class="title">
+    <div class="title ion-margin-vertical">
       <span>Prévias</span>
     </div>
 
     <ion-slides class="stories" [options]="slidesOptions">
-    <ion-slide *ngfor="let story of stories">
-      <ion-img [src]="story.Poster"></ion-img>
-    </ion-slide>
+      <ion-slide *ngFor="let story of stories">
+        <ion-img [src]="story.Poster"></ion-img>
+      </ion-slide>
     </ion-slides>
 
-    <div class="title">
+    <div class="title ion-margin-vertical">
       <span>Minha lista</span>
     </div>
 
-    <div class="title">
+    <ion-slides class="lists" [options]="slidesOptions">
+      <ion-slide *ngFor="let movie of movies">
+        <ion-img [src]="movie.Poster"></ion-img>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="title ion-margin-vertical">
       <span>Continuar assistindo</span>
+
+      <ion-slides class="lists" [options]="slidesOptions">
+        <ion-slide *ngFor="let movie of movies">
+          <ion-img [src]="movie.Poster"></ion-img>
+        </ion-slide>
+      </ion-slides>
+
     </div>
   </div>
 
